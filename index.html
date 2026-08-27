@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KusinaQuest | Filipino Food Explorer</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Image/kusinaquest.png">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            Kusina<span>Quest</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                🇵🇭 A Taste of the Philippines
+            </p>
+
+            <h1>
+                Discover the Flavors of
+                <span>Filipino Cuisine</span>
+            </h1>
+
+            <p class="hero-description">
+                Explore Filipino dishes, discover their ingredients,
+                and learn how to prepare them step by step.
+            </p>
+
+            <a href="#explore" class="hero-button">
+                Start Your Quest →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXPLORE ================= -->
+
+    <section class="explore-section" id="explore">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    KUSINAQUEST
+                </p>
+
+                <h2>
+                    Explore Filipino Dishes
+                </h2>
+
+                <p>
+                    Browse through different Filipino foods
+                    and discover recipes you can try.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔎 Search for a dish..."
+                >
+
+            </div>
+
+
+            <!-- CATEGORIES -->
+
+            <div class="categories">
+
+                <button
+                    class="category-btn active"
+                    data-category="all">
+                    All
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="main">
+                    Main Dishes
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="soup">
+                    Soups
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="snack">
+                    Snacks
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="dessert">
+                    Desserts
+                </button>
+
+            </div>
+
+
+            <!-- ================= FOOD GRID ================= -->
+
+            <div class="food-grid" id="foodGrid">
+
+
+                <!-- ================= CHICKEN ADOBO ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="main"
+                    data-name="chicken adobo">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/adobo.png"
+                            alt="Chicken Adobo"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Main Dish
+                        </span>
+
+                        <h3>Chicken Adobo</h3>
+
+                        <p>
+                            A Filipino classic made with chicken,
+                            soy sauce, vinegar, garlic, and spices.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="adobo">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= PANCIT ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="main"
+                    data-name="pancit">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/pancit.png"
+                            alt="Pancit"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Main Dish
+                        </span>
+
+                        <h3>Pancit</h3>
+
+                        <p>
+                            Stir-fried Filipino noodles with
+                            vegetables, meat, and savory seasoning.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="pancit">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= KARE-KARE ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="main"
+                    data-name="kare kare">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/karekare.png"
+                            alt="Kare-Kare"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Main Dish
+                        </span>
+
+                        <h3>Kare-Kare</h3>
+
+                        <p>
+                            A rich Filipino stew with vegetables,
+                            meat, and a savory peanut-based sauce.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="kare-kare">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= SISIG ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="main"
+                    data-name="sisig">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/sisig.png"
+                            alt="Sisig"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Main Dish
+                        </span>
+
+                        <h3>Sisig</h3>
+
+                        <p>
+                            A savory Filipino dish made with
+                            chopped pork, onions, and seasonings.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="sisig">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= SINIGANG ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="soup"
+                    data-name="sinigang">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/sinigang.png"
+                            alt="Sinigang"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Soup
+                        </span>
+
+                        <h3>Sinigang</h3>
+
+                        <p>
+                            A comforting sour soup traditionally
+                            flavored with tamarind and vegetables.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="sinigang">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= BULALO ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="soup"
+                    data-name="bulalo">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/Bulalo.png"
+                            alt="Bulalo"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Soup
+                        </span>
+
+                        <h3>Bulalo</h3>
+
+                        <p>
+                            A hearty beef soup made with tender
+                            beef shank, bone marrow, and vegetables.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="bulalo">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= TINOLA ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="soup"
+                    data-name="tinola">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/tinola.png"
+                            alt="Tinola"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Soup
+                        </span>
+
+                        <h3>Tinola</h3>
+
+                        <p>
+                            A comforting chicken soup with ginger,
+                            green papaya, and leafy vegetables.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="tinola">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= BATCHOY ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="soup"
+                    data-name="batchoy">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/batchoy.png"
+                            alt="Batchoy"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Soup
+                        </span>
+
+                        <h3>Batchoy</h3>
+
+                        <p>
+                            A flavorful noodle soup traditionally
+                            associated with Iloilo.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="batchoy">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= LUMPIA ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="snack"
+                    data-name="lumpiang shanghai">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/lumpia.png"
+                            alt="Lumpiang Shanghai"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Snack
+                        </span>
+
+                        <h3>Lumpiang Shanghai</h3>
+
+                        <p>
+                            Crispy Filipino spring rolls filled
+                            with seasoned meat and vegetables.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="lumpia">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= TURON ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="snack"
+                    data-name="turon">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/turon.png"
+                            alt="Turon"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Snack
+                        </span>
+
+                        <h3>Turon</h3>
+
+                        <p>
+                            A crispy Filipino snack made with
+                            banana and caramelized sugar.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="turon">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= EMPANADA ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="snack"
+                    data-name="empanada">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/empanada.png"
+                            alt="Empanada"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Snack
+                        </span>
+
+                        <h3>Empanada</h3>
+
+                        <p>
+                            A savory pastry filled with meat,
+                            vegetables, and flavorful seasonings.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="empanada">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= SIOPAO ASADO ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="snack"
+                    data-name="siopao-asado">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/siopaoasado.png"
+                            alt="Siopao Asado"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Snack
+                        </span>
+
+                        <h3>Siopao Asado</h3>
+
+                        <p>
+                            Steamed buns filled with seasoned meat and vegetables.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="siopao-asado">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= HALO-HALO ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="dessert"
+                    data-name="halo halo">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/halohalo1.png"
+                            alt="Halo-Halo"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Dessert
+                        </span>
+
+                        <h3>Halo-Halo</h3>
+
+                        <p>
+                            A colorful Filipino dessert made with
+                            shaved ice, milk, fruits, and toppings.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="halo-halo">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= LECHE FLAN ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="dessert"
+                    data-name="leche flan">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/lecheflan.png"
+                            alt="Leche Flan"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Dessert
+                        </span>
+
+                        <h3>Leche Flan</h3>
+
+                        <p>
+                            A rich Filipino custard dessert
+                            topped with golden caramel.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="leche-flan">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= BIBINGKA ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="dessert"
+                    data-name="bibingka">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/bibingka.png"
+                            alt="Bibingka"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Dessert
+                        </span>
+
+                        <h3>Bibingka</h3>
+
+                        <p>
+                            A soft Filipino rice cake traditionally
+                            enjoyed during the Christmas season.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="bibingka">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= BIKO ================= -->
+
+                <article
+                    class="food-card"
+                    data-category="dessert"
+                    data-name="biko">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Image/biko.png"
+                            alt="Biko"
+                            class="food-image"
+                        >
+
+                        <button class="favorite-btn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="food-category">
+                            Dessert
+                        </span>
+
+                        <h3>Biko</h3>
+
+                        <p>
+                            A sticky Filipino rice cake made with
+                            glutinous rice, coconut milk, and brown sugar.
+                        </p>
+
+                        <button
+                            class="recipe-btn"
+                            data-recipe="biko">
+                            View Recipe →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="container">
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    ABOUT KUSINAQUEST
+                </p>
+
+                <h2>
+                    More Than Just Food
+                </h2>
+
+                <p>
+                    KusinaQuest is an interactive Filipino food
+                    explorer designed to introduce users to the
+                    diverse dishes and flavors of the Philippines.
+                    Each dish includes its ingredients and
+                    step-by-step preparation instructions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RECIPE MODAL ================= -->
+
+    <div class="modal" id="recipeModal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal">
+                ×
+            </button>
+
+            <img
+                id="modalImage"
+                class="modal-image"
+                src=""
+                alt="Recipe"
+            >
+
+            <div class="modal-body">
+
+                <span
+                    class="food-category"
+                    id="modalCategory">
+                </span>
+
+                <h2 id="modalTitle"></h2>
+
+                <p
+                    class="modal-description"
+                    id="modalDescription">
+                </p>
+
+                <div class="recipe-layout">
+
+                    <div class="ingredients-section">
+
+                        <h3>🛒 Ingredients</h3>
+
+                        <ul id="modalIngredients"></ul>
+
+                    </div>
+
+                    <div class="steps-section">
+
+                        <h3>👨‍🍳 How to Make It</h3>
+
+                        <ol id="modalSteps"></ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            Kusina<span>Quest</span>
+        </h3>
+
+        <p>
+            Exploring Filipino flavors, one dish at a time. 🇵🇭
+        </p>
+
+        <p class="copyright">
+            © 2026 KusinaQuest
+        </p>
+
+    </footer>
+
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

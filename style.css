@@ -1,0 +1,736 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf2;
+    color: #38271f;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    height: 72px;
+
+    background: #6f1d1b;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span,
+footer span {
+    color: #f4c95d;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #f4c95d;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(54, 24, 15, 0.68),
+            rgba(54, 24, 15, 0.68)
+        ),
+        url("Image/bg.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    color: white;
+}
+
+.hero-label,
+.section-label {
+    color: #d89b2b;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f4c95d;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #fff1dd;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    background: #f4c95d;
+
+    color: #5d1717;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    background: white;
+}
+
+
+/* =========================================
+   EXPLORE SECTION
+========================================= */
+
+.explore-section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    color: #6f1d1b;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #75665d;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-container {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+}
+
+#searchInput {
+    width: 100%;
+
+    padding: 16px 22px;
+
+    border: 2px solid #e2cba8;
+
+    border-radius: 30px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    background: white;
+}
+
+#searchInput:focus {
+    border-color: #6f1d1b;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.categories {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    background: #eadcc6;
+
+    color: #583d2d;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #6f1d1b;
+
+    color: white;
+}
+
+
+/* =========================================
+   FOOD GRID
+========================================= */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(65, 39, 20, 0.09);
+
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 30px rgba(65, 39, 20, 0.16);
+}
+
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.image-container {
+    position: relative;
+}
+
+.food-image {
+    width: 100%;
+
+    height: 220px;
+
+    display: block;
+
+    object-fit: cover;
+
+    cursor: pointer;
+}
+
+.favorite-btn {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.2);
+
+    transition: 0.2s;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.liked {
+    color: #c62828;
+}
+
+
+/* =========================================
+   FOOD INFORMATION
+========================================= */
+
+.food-info {
+    padding: 22px;
+}
+
+.food-category {
+    display: inline-block;
+
+    color: #986717;
+
+    background: #fff0c7;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.food-info h3 {
+    color: #6f1d1b;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #75665d;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+.recipe-btn {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #6f1d1b;
+
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.recipe-btn:hover {
+    background: #4d1110;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+    background: #6f1d1b;
+
+    padding: 80px 0;
+
+    text-align: center;
+}
+
+.about-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.about-content h2 {
+    color: white;
+}
+
+.about-content p:last-child {
+    color: #ffe9d2;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   RECIPE MODAL
+========================================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    overflow-y: auto;
+
+    padding: 30px 15px;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background: #fffaf2;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    animation: modalAppear 0.25s ease;
+}
+
+@keyframes modalAppear {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+.close-modal {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 25px;
+
+    z-index: 5;
+}
+
+.modal-image {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+}
+
+.modal-body {
+    padding: 35px;
+}
+
+.modal-body h2 {
+    color: #6f1d1b;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.modal-description {
+    color: #6e625a;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.recipe-layout {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.5fr;
+
+    gap: 40px;
+}
+
+.recipe-layout h3 {
+    color: #6f1d1b;
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+
+/* INGREDIENTS */
+
+#modalIngredients {
+    list-style: none;
+}
+
+#modalIngredients li {
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eadcca;
+
+    color: #51443c;
+}
+
+#modalIngredients li::before {
+    content: "🥄 ";
+}
+
+
+/* STEPS */
+
+#modalSteps {
+    counter-reset: step;
+
+    list-style: none;
+}
+
+#modalSteps li {
+    counter-increment: step;
+
+    position: relative;
+
+    padding-left: 50px;
+
+    margin-bottom: 22px;
+
+    line-height: 1.7;
+
+    color: #51443c;
+}
+
+#modalSteps li::before {
+    content: counter(step);
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #6f1d1b;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #351414;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer h3 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #e8d8cc;
+}
+
+footer .copyright {
+    margin-top: 15px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .recipe-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image {
+        height: 230px;
+    }
+
+    .modal-body {
+        padding: 25px 20px;
+    }
+
+    .modal-body h2 {
+        font-size: 30px;
+    }
+
+}
